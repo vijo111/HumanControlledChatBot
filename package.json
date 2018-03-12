@@ -1,0 +1,17 @@
+{
+  "name": "HumanControlledChatBot",
+  "version": "1.0.0",
+  "description": "Bot shows the suggested reply in comment box, but user has to approve by clicking send. User can edit the reply text if needed.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vijay",
+  "license": "",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "express": "^4.15.3",
+    "jquery": "^3.2.1",
+    "socket.io": "^2.0.1"
+  }
+}
