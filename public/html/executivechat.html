@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/executivechat.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="../js/executivechat.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        $(document).ready(function () {
+            performSocketSetup();
+            initializeEvents();
+        });
+    </script>
+</head>
+
+<body>
+    <div class="parent-container">
+        <div id="main-content" class="container-fluid main-content-shadow">
+            <section id="sidebar" class="sidebar sidebar-shadow">
+                <div class="container-fluid">
+                    <div class="row sb-header d-flex justify-content-center">
+                        <div class="exec-img">
+                            <img src="../img/user.png" />
+                        </div>
+                        <div id="executivename" class="col exec-header">
+                        </div>
+                    </div>
+                    <div class="row sb-content">
+                        <div class="col p-0" style="text-align:center;align-self: center;">
+                            <ul id="users-list" class="list-group">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div id="content-parent">
+                <section id="content" class="full-height">
+                    <div class="card ih-height">
+                        <div class="card-header"> 
+                            <div class="d-flex justify-content-between">
+                                <a role="button" class="btn btn-secondary" id="togglesb" class="mt-1" aria-hidden="true">
+                                    <span class="fa fa-bars"></span>
+                                </a>
+                                <span class="content-header"> Executive Chat </span>
+                                <span id="clientusername" class="content-header">  </span>
+                            </div>
+                        </div>
+                        <div id="chatcontent" class="card-block chat-content">
+                        </div>
+                        <div class="card-footer text-muted">
+                            <div class="input-group">
+                                <input id="data" type="text" class="form-control input-sm" placeholder="Write your message here..." />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary btn-sm" id="datasend">Send</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

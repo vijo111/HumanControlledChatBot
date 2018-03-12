@@ -1,0 +1,19 @@
+#chat-container {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        height: 76vh;
+    }
+
+#usercontainer {
+    padding : 2px;
+    overflow-y: scroll; 
+    overflow-x: hidden;
+    height : 50vh;
+    width: 100%;
+ }
+
+tr {
+    border: 1px orange;
+    box-shadow: 1px 1px 2px rgba(orange, 0.2); 
+      }
